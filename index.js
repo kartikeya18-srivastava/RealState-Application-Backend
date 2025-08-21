@@ -8,7 +8,7 @@ const app=express();
 app.use(express.json());
 app.use(fileUpload());
 app.use(cors());
-const PORT=9000; 
+const PORT= process.env.PORT || 9000; 
 dbConnect();
 app.use('/img',express.static('uploads'));
  app.use('/api',router);
