@@ -4,6 +4,9 @@ import router from './route/userRoute.js';
 import adminRoute from './route/adminRoute.js'
 import fileUpload from 'express-fileupload';
 import cors from 'cors'
+import dotenv from "dotenv";
+
+dotenv.config();
 const app=express();
 app.use(express.json());
 app.use(fileUpload());
